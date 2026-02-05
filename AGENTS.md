@@ -1,12 +1,16 @@
 # AGENTS.md
 
-> **Important:** This file must be kept up-to-date. When the user provides new rules or makes significant codebase changes, update this file accordingly.
+> **Important:** This file must be kept up-to-date. When the user provides new rules or makes significant codebase
+> changes, update this file accordingly.
 
 ## Project Overview
 
-**Startify** is a GTK4/Libadwaita desktop application built with Deno that provides a unified interface for managing Linux applications. It aims to make app management accessible to everyday users by consolidating Flatpak, AppImage, and Distrobox applications into one place.
+**Startify** is a GTK4/Libadwaita desktop application built with Deno that provides a unified interface for managing
+Linux applications. It aims to make app management accessible to everyday users by consolidating Flatpak, AppImage, and
+Distrobox applications into one place.
 
 ### Key Features (Current & Planned)
+
 - Browse and manage user and system launchers (`.desktop` files)
 - AppImage management with portable home folder support
 - Distrobox container integration
@@ -100,31 +104,38 @@ deno task compile
 ## Key Abstractions
 
 ### Signal System (`libs/signals.ts`)
+
 A reactive state management system similar to Svelte stores:
+
 - `sync<T>(starter)` - Creates a signal with start/stop lifecycle
 - `computed(() => ...)` - Creates a derived signal
 - Signals are lazy - they only run when followed
 
 ### Coroutines (`libs/utils/coroutine.ts`)
+
 Generator-based async that integrates with GLib's main loop:
+
 ```typescript
 coroutine(function* () {
-    while (true) {
-        doSomething();
-        yield timeout(250); // Wait 250ms using GLib
-    }
+	while (true) {
+		doSomething();
+		yield timeout(250); // Wait 250ms using GLib
+	}
 });
 ```
 
 ### Desktop File Parser (`libs/desktop.ts`)
+
 Parses `.desktop` files into a structured format:
+
 ```typescript
 type DesktopFile = Record<string, Record<string, string>>;
 ```
 
 ## Agent Instructions
 
-1. **Keep this file updated** - When the user provides new rules, conventions, or makes architectural changes, update the relevant sections of this document.
+1. **Keep this file updated** - When the user provides new rules, conventions, or makes architectural changes, update
+   the relevant sections of this document.
 
 2. **Follow import conventions strictly** - Always use `~/src/...` paths, never relative imports.
 
