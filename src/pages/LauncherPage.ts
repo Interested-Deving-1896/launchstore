@@ -63,12 +63,13 @@ export function LauncherPage(launcher: Launcher) {
 
 	const content = Gtk.Box.new(Gtk.Orientation.VERTICAL, SPACING);
 
-	const info = launcher.info;
-	const sizeGroup = Adw.PreferencesGroup.new();
-	sizeGroup.set_title("Size");
-	content.append(sizeGroup);
+	const { info } = launcher;
 
 	if (info.type === "appimage") {
+		const sizeGroup = Adw.PreferencesGroup.new();
+		sizeGroup.set_title("Size");
+		content.append(sizeGroup);
+
 		const appImageRow = AppImageSizeRow(info);
 		sizeGroup.add(appImageRow);
 
