@@ -1,10 +1,10 @@
 import * as path from "@std/path";
-import { PATH } from "~/src/constants.ts";
-import { DesktopFile, parseDesktopFile } from "~/src/libs/desktop.ts";
-import { computed, Sync, sync } from "~/src/libs/signals.ts";
-import { coroutine, timeout } from "~/src/libs/utils/coroutine.ts";
-import { getDirectorySize } from "~/src/libs/utils/size.ts";
-import { tryCatch } from "~/src/libs/utils/try.ts";
+import { PATH } from "~/constants.ts";
+import { DesktopFile, parseDesktopFile } from "~/libs/desktop.ts";
+import { computed, Sync, sync } from "~/libs/signals.ts";
+import { coroutine, timeout } from "~/libs/utils/coroutine.ts";
+import { getDirectorySize } from "~/libs/utils/size.ts";
+import { tryCatch } from "~/libs/utils/try.ts";
 
 export type Launcher = {
 	desktop: {

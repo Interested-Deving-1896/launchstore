@@ -9,7 +9,7 @@
 		"@girs/GLib": "https://gir.deno.dev/GLib-2.0",
 		"@girs/GObject": "https://gir.deno.dev/GObject-2.0",
 		"@std/path": "jsr:@std/path@^1.1.0",
-		"~/": "./"
+		"~/": "./src/"
 	},
 	"compilerOptions": {
 		"lib": [

@@ -1,9 +1,9 @@
 import Gtk from "@girs/Gtk";
-import { SPACING } from "~/src/constants.ts";
-import { Launcher } from "~/src/libs/launchers.ts";
-import { AppImageSizeGroup } from "~/src/components/appimage/AppImageSizeGroup.ts";
+import { SPACING } from "~/constants.ts";
+import { Launcher } from "~/libs/launchers.ts";
+import { AppImageSizeGroup } from "~/components/appimage/AppImageSizeGroup.ts";
 
-export function AppImageGroups(info: Launcher.Info & { type: "appimage" }) {
+export function AppImageGroups(info: Launcher.AppImageInfo) {
 	const container = Gtk.Box.new(Gtk.Orientation.VERTICAL, SPACING);
 
 	const sizeGroup = AppImageSizeGroup(info);

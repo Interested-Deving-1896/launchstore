@@ -1,11 +1,11 @@
 import Gtk from "@girs/Gtk";
 import Pango from "@girs/Pango";
-import { SPACING } from "~/src/constants.ts";
-import { formatLauncherTypeName, Launcher } from "~/src/libs/launchers.ts";
-import { html } from "~/src/libs/utils/markup.ts";
-import { Page } from "~/src/components/Page.ts";
-import { buttonClass } from "~/src/libs/utils/buttonClass.ts";
-import { AppImageGroups } from "~/src/components/appimage/AppImageGroups.ts";
+import { SPACING } from "~/constants.ts";
+import { formatLauncherTypeName, Launcher } from "~/libs/launchers.ts";
+import { html } from "~/libs/utils/markup.ts";
+import { Page } from "~/components/Page.ts";
+import { buttonClass } from "~/libs/utils/buttonClass.ts";
+import { AppImageGroups } from "~/components/appimage/AppImageGroups.ts";
 
 export function LauncherPage(launcher: Launcher) {
 	const self = Page();

@@ -1,11 +1,11 @@
 import Adw from "@girs/Adw";
 import Gtk from "@girs/Gtk";
-import { AppContext } from "~/src/app.ts";
-import { Launcher } from "~/src/libs/launchers.ts";
-import { LauncherItemBox } from "~/src/components/LauncherItemBox.ts";
-import { MoreBox } from "~/src/components/MoreBox.ts";
-import { Page } from "~/src/components/Page.ts";
-import { LauncherPage } from "~/src/pages/LauncherPage.ts";
+import { AppContext } from "~/app.ts";
+import { Launcher } from "~/libs/launchers.ts";
+import { LauncherItemBox } from "~/components/LauncherItemBox.ts";
+import { MoreBox } from "~/components/MoreBox.ts";
+import { Page } from "~/components/Page.ts";
+import { LauncherPage } from "~/pages/LauncherPage.ts";
 
 export function LaunchersPage(ctx: AppContext, launchers: Launcher[]) {
 	const self = Page();

@@ -66,7 +66,7 @@ src/
 
 - **Always use absolute imports with the `~/` alias** - never use relative imports (`./` or `../`)
 - The `~/` alias maps to the project root as defined in `deno.json`
-- Example: `import { SPACING } from "~/src/constants.ts";`
+- Example: `import { SPACING } from "~/constants.ts";`
 
 ### Code Style
 
@@ -137,7 +137,7 @@ type DesktopFile = Record<string, Record<string, string>>;
 1. **Keep this file updated** - When the user provides new rules, conventions, or makes architectural changes, update
    the relevant sections of this document.
 
-2. **Follow import conventions strictly** - Always use `~/src/...` paths, never relative imports.
+2. **Follow import conventions strictly** - Always use `~/...` paths, never relative imports.
 
 3. **Match existing patterns** - Study existing components before creating new ones to maintain consistency.
 
