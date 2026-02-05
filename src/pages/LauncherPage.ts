@@ -1,15 +1,15 @@
 import Adw from "@girs/Adw";
 import Gtk from "@girs/Gtk";
 import Pango from "@girs/Pango";
-import { SPACING } from "../common/constants.ts";
-import { formatLauncherTypeName, Launcher } from "../common/launchers.ts";
-import { html } from "../common/utils/markup.ts";
+import { SPACING } from "../libs/constants.ts";
+import { formatLauncherTypeName, Launcher } from "../libs/launchers.ts";
+import { html } from "../libs/utils/markup.ts";
 import { Page } from "../components/Page.ts";
-import { buttonClass } from "../common/utils/buttonClass.ts";
-import { bind } from "../common/utils/bind.ts";
-import { formatBytes } from "../common/utils/format.ts";
-import { removeChildren } from "../common/utils/gtk.ts";
-import { computed } from "../common/signals.ts";
+import { buttonClass } from "../libs/utils/buttonClass.ts";
+import { bind } from "../libs/utils/bind.ts";
+import { formatBytes } from "../libs/utils/format.ts";
+import { removeChildren } from "../libs/utils/gtk.ts";
+import { computed } from "../libs/signals.ts";
 
 export function LauncherPage(launcher: Launcher) {
 	const self = Page();

@@ -1,4 +1,4 @@
-import * as path from "jsr:@std/path@1.0.9";
+import * as path from "@std/path";
 
 export const HOME = Deno.env.get("HOME")!;
 export const PATH = (Deno.env.get("PATH") ?? "").split(":").map((p) => path.resolve(p));

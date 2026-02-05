@@ -1,7 +1,7 @@
 import Adw from "@girs/Adw";
 import Gtk from "@girs/Gtk";
 import { AppContext } from "../app.ts";
-import { Launcher } from "../common/launchers.ts";
+import { Launcher } from "../libs/launchers.ts";
 import { LauncherItemBox } from "../components/LauncherItemBox.ts";
 import { MoreBox } from "../components/MoreBox.ts";
 import { Page } from "../components/Page.ts";

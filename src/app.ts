@@ -1,11 +1,11 @@
 import Adw from "@girs/Adw";
 import Gio from "@girs/Gio";
 import Gtk from "@girs/Gtk";
-import { HOME, SPACING } from "./common/constants.ts";
+import { HOME, SPACING } from "./libs/constants.ts";
 import { Page } from "./components/Page.ts";
 import { LaunchersPage } from "./pages/HomePage.ts";
 import { SettingsWindow } from "./windows/SettingsWindow.ts";
-import { getLaunchers } from "./common/launchers.ts";
+import { getLaunchers } from "./libs/launchers.ts";
 import * as path from "@std/path";
 import { ContainerBox } from "./components/ContainerBox.ts";
 

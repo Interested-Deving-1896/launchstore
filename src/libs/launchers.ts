@@ -19,27 +19,31 @@ export type Launcher = {
 	info: Launcher.Info;
 };
 export declare namespace Launcher {
-	export type Info =
-		| {
-			type: "unknown";
-		}
-		| {
-			type: "appimage";
-			appimage: {
-				exist: Sync<boolean>;
-				size: Sync<number>;
-			};
-			portable: {
-				exist: Sync<boolean>;
-				size: Sync<number>;
-				create(): void;
-				clear(): void;
-				delete(): void;
-			};
-		}
-		| {
-			type: "distrobox";
+	export type UnknownInfo = {
+		type: "unknown";
+	};
+	export type AppImageInfo = {
+		type: "appimage";
+		appimage: {
+			exist: Sync<boolean>;
+			size: Sync<number>;
 		};
+		portable: {
+			exist: Sync<boolean>;
+			size: Sync<number>;
+			create(): void;
+			clear(): void;
+			delete(): void;
+		};
+	};
+	export type DistroboxInfo = {
+		type: "distrobox";
+	};
+
+	export type Info =
+		| UnknownInfo
+		| AppImageInfo
+		| DistroboxInfo;
 }
 
 const launcherTypeNameMap: { [K in Launcher.Info["type"]]: string } = {

@@ -1,7 +1,7 @@
 import Adw from "@girs/Adw";
 import Gtk from "@girs/Gtk";
 import { ContainerBox } from "./ContainerBox.ts";
-import { SPACING } from "../common/constants.ts";
+import { SPACING } from "../libs/constants.ts";
 
 export type Page = {
 	host: Gtk.ScrolledWindow;

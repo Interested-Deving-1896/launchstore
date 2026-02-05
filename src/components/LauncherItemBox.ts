@@ -1,4 +1,4 @@
-import { formatLauncherTypeName, Launcher } from "../common/launchers.ts";
+import { formatLauncherTypeName, Launcher } from "../libs/launchers.ts";
 import { TitlesAndIconBox } from "./TitlesAndIconBox.ts";
 
 export function LauncherItemBox(launcher: Launcher) {
