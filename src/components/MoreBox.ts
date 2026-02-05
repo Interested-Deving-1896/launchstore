@@ -1,5 +1,5 @@
 import Gtk from "@girs/Gtk";
-import { SPACING } from "../constants.ts";
+import { SPACING } from "~/src/constants.ts";
 
 export function MoreBox() {
 	const self = Gtk.Box.new(Gtk.Orientation.HORIZONTAL, SPACING);

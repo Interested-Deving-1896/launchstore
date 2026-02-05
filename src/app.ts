@@ -1,13 +1,13 @@
 import Adw from "@girs/Adw";
 import Gio from "@girs/Gio";
 import Gtk from "@girs/Gtk";
-import { HOME, SPACING } from "./constants.ts";
-import { Page } from "./components/Page.ts";
-import { LaunchersPage } from "./pages/HomePage.ts";
-import { SettingsWindow } from "./windows/SettingsWindow.ts";
-import { getLaunchers } from "./libs/launchers.ts";
+import { HOME, SPACING } from "~/src/constants.ts";
+import { Page } from "~/src/components/Page.ts";
+import { LaunchersPage } from "~/src/pages/HomePage.ts";
+import { SettingsWindow } from "~/src/windows/SettingsWindow.ts";
+import { getLaunchers } from "~/src/libs/launchers.ts";
 import * as path from "@std/path";
-import { ContainerBox } from "./components/ContainerBox.ts";
+import { ContainerBox } from "~/src/components/ContainerBox.ts";
 
 Adw.init();
 

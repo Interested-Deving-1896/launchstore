@@ -1,5 +1,5 @@
 import Gtk from "@girs/Gtk";
-import { SPACING } from "../constants.ts";
+import { SPACING } from "~/src/constants.ts";
 
 export function ContainerBox(...args: Parameters<typeof Gtk.Box.new>) {
 	const container = Gtk.Box.new(...args);
