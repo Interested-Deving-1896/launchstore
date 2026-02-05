@@ -4,6 +4,7 @@ import Gtk from "@girs/Gtk";
 import { HOME, SPACING } from "~/constants.ts";
 import { Page } from "~/components/Page.ts";
 import { LaunchersPage } from "~/pages/HomePage.ts";
+import { InstallAppImagePage } from "~/pages/InstallAppImagePage.ts";
 import { SettingsWindow } from "~/windows/SettingsWindow.ts";
 import { getLaunchers } from "~/libs/launchers.ts";
 import * as path from "@std/path";
@@ -12,9 +13,12 @@ import { ContainerBox } from "~/components/ContainerBox.ts";
 Adw.init();
 
 const app = Adw.Application.new(
-	"com.example.MyApp",
-	Gio.ApplicationFlags.DEFAULT_FLAGS,
+	"io.github.nomadshiba.LaunchStore",
+	Gio.ApplicationFlags.HANDLES_OPEN,
 );
+
+// Store pending AppImage path to open after window is ready
+let pendingAppImagePath: string | null = null;
 
 export type AppNavigation = {
 	push(params: { title: string; page: Page }): void;
@@ -143,7 +147,37 @@ app.connect("activate", () => {
 		"applications-system",
 	);
 
+	// Handle pending AppImage if opened via file
+	if (pendingAppImagePath) {
+		const appImagePath = pendingAppImagePath;
+		pendingAppImagePath = null;
+		const fileName = path.basename(appImagePath);
+		navigation.push({
+			title: `Install ${fileName}`,
+			page: InstallAppImagePage({
+				appImagePath,
+				onInstalled: () => {
+					navigationView.pop();
+				},
+			}),
+		});
+	}
+
 	win.present();
 });
 
-app.run();
+// Handle opening AppImage files
+app.connect("open", (self, files: Gio.File[], _hint: string) => {
+	for (let i = 0; i < files.length; i++) {
+		const file = files[i];
+		const filePath = file.get_path();
+		if (filePath && filePath.toLowerCase().endsWith(".appimage")) {
+			pendingAppImagePath = filePath;
+			break;
+		}
+	}
+	// Activate the app to show the window
+	self.activate();
+});
+
+app.run(Deno.args);

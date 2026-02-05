@@ -5,9 +5,9 @@
 
 ## Project Overview
 
-**Startify** is a GTK4/Libadwaita desktop application built with Deno that provides a unified interface for managing
-Linux applications. It aims to make app management accessible to everyday users by consolidating Flatpak, AppImage, and
-Distrobox applications into one place.
+**LaunchStore** is a GTK4/Libadwaita desktop application built with Deno that provides a unified interface for managing
+and discovering Linux applications. It aims to make app management accessible to everyday users by consolidating
+Flatpak, AppImage, and Distrobox applications into one place.
 
 ### Key Features (Current & Planned)
 

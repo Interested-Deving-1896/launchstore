@@ -21,7 +21,7 @@
 	},
 	"tasks": {
 		"start": "deno run --allow-all ./src/app.ts",
-		"compile": "deno compile --allow-all -o ./dist/ ./src/app.ts"
+		"compile": "deno compile --allow-all -o ./dist/launchstore ./src/app.ts"
 	},
 	"fmt": {
 		"useTabs": true,
