@@ -1,7 +1,7 @@
 import Adw from "@girs/Adw";
 import Gtk from "@girs/Gtk";
 import Pango from "@girs/Pango";
-import { SPACING } from "../libs/constants.ts";
+import { SPACING } from "../constants.ts";
 import { formatLauncherTypeName, Launcher } from "../libs/launchers.ts";
 import { html } from "../libs/utils/markup.ts";
 import { Page } from "../components/Page.ts";

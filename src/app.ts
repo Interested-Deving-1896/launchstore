@@ -1,7 +1,7 @@
 import Adw from "@girs/Adw";
 import Gio from "@girs/Gio";
 import Gtk from "@girs/Gtk";
-import { HOME, SPACING } from "./libs/constants.ts";
+import { HOME, SPACING } from "./constants.ts";
 import { Page } from "./components/Page.ts";
 import { LaunchersPage } from "./pages/HomePage.ts";
 import { SettingsWindow } from "./windows/SettingsWindow.ts";

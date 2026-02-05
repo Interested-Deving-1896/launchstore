@@ -1,5 +1,5 @@
 import * as path from "@std/path";
-import { PATH } from "./constants.ts";
+import { PATH } from "../constants.ts";
 import { DesktopFile, parseDesktopFile } from "./desktop.ts";
 import { computed, Sync, sync } from "./signals.ts";
 import { coroutine, timeout } from "./utils/coroutine.ts";
