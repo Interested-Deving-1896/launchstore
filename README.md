@@ -1,79 +1,75 @@
-# LaunchStore
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# launchstore
 
-Install, Uninstall, Manage App and App data, settings, configs, etc... in one place.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/launchstore)
 
-A unified store and app manager for Linux.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Planning to support:
+## Architecture
 
-- Flatpak
-- AppImage
-- Distrobox
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-Additionally features:
+## Install
 
-- Editting Launchers
-- Managing Startup Launchers.
-- etc.
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-Let's anyone use Linux easily and manage apps easily in one place, easy to use and understand by normal everyday people.
-You are on a Fedora? But have `.deb` package? No problem, doule click on it, and install it on distrobox.
+```bash
+git clone https://github.com/Interested-Deving-1896/launchstore.git
+cd launchstore
+```
 
-We have two main tabs, "Store" and "Installed", installed tab has the same layout as Gnome settings or similar.
-Basically have two panes, left pane have a categories and under them buttons.
+## Usage
 
-Categories can be:
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-- Flatpak
-- Distrobox
-- AppImage
+## Configuration
 
-Under flatpak category, we can have flatpak remotes on the left pane again.\
-And under Distrobox category we have distroboxes basically.\
-And under the AppImage Category, we can have the AppImage folders, and one for randomly found appimages in the system.
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-Each category at the bottom can have a button that says "Add Remote", "Create Distrobox", "Add Library" etc.
+## CI
 
-When we click on a flatpak repo, on the right pane we see a hero that says more about the remote, and under it have the
-app list installed from that repo.\
-When we click on a distrobox, on the right pane we see a hero that says more about the distrobox, have actions like,
-start/stop it, or open it in terminal, and also at the bottom of it we also have list of exportable app in the
-distrobox.\
-When we click on a appimage library, on the right pane we see a hero that gives more info about the library, and we see
-appimages in that library...
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-Same patterns for flatpaks, distroboxes and appimages basically.
+## Mirror chain
 
-We should also how the detailed info about app size, and its data size, and cache size. etc.
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/launchstore`](https://github.com/Interested-Deving-1896/launchstore) and mirrored through:
 
-Some more notes:
+```
+Interested-Deving-1896/launchstore  ──►  OpenOS-Project-OSP/launchstore  ──►  OpenOS-Project-Ecosystem-OOC/launchstore
+```
 
-- Distrobox should by default include GPU integration and create a custom isolated home folder for each distrobox.
-- AppImages should have portable home folders by default.
-- Even thought app is not using `.cache` for cache, we should still have a seperate button to delete cache.
-- Take Android app management as an example, clear cache, clear appdata, uninstall, uninstall but keep data (might clear
-  cache).
-- We should have warning banners in app detail pages for recommended actions: for example: we found an appimage inside
-  the launchers, but its not placed in the appimages directory, we can have a little "Fix" button to move it on the
-  banner.
-- Editting launchers directly is unsafe, and should warn you.
-- It might me better if startup launchers are executing the actual launcher, so if the launcher updates we dont have to
-  keep an eye on two places.
-- And we can detect when the targetted launcher is missing and also get rid of startup.
-- We should also check repo of installed flatpaks, because remote can be removed after the app is installed. so we
-  should also add to the remote list from install apps, and in the hero clearly state that repo doesnt exists anymore
-  and the app is an oprhan. unless flatpak already gives us the remote of the apps by itself.
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-## Combination of:
+## Contributors
 
-- Distroshelf
-- BoxBuddy
-- Bazaar
-- Extension Manager
-- Flatseal
-- Gear Lever
-- Menu Menu
-- Flatsweep
-- Ignition
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-Opinionated to isolate stuff as much as posibble.
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+[GPL-2.0](https://github.com/Interested-Deving-1896/launchstore/blob/master/LICENSE) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
